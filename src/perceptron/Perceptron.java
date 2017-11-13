@@ -88,18 +88,25 @@ public class Perceptron {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-//        readInput();
-//        selectedOp = getOpTime(readInt("Insira  o  codigo da operação (0- AND, 1-OR, 2-XOR):"));
-//        float lf = (float) readDouble("Insira o fator de aprendizagem");
-//        int iterations = readInt("Insira o número de iterações");
-//        for(double[] i : input){
-//             PerceptronSolver p =  new PerceptronSolver();
-//             p.train(i, 0.5, lf, iterations, selectedOp);
-//             //System.out.println("===========================================\n\nOPERATION:"+selectedOp.name()+"\nINPUT : "+Arrays.toString(i)+"\nRESULT: "+p.getResult()+"\nCORRECT RESULT "+ p.getOutput(i));
-//        }
-        double[] vet = {0, 1,1,1,1};
-        PerceptronSolver p = new PerceptronSolver();
-        p.train(vet, 0.5, 0.1f, 50000,AND);
+        readInput();
+        selectedOp = getOpTime(readInt("Insira  o  codigo da operação (0- AND, 1-OR, 2-XOR):"));
+        float lf = (float) readDouble("Insira o fator de aprendizagem");
+        int iterations = readInt("Insira o número de iterações");
+        for(double[] i : input){
+             PerceptronSolver p =  new PerceptronSolver();
+             p.train(i, 0.5, lf, iterations, selectedOp);
+             double result = p.getOutput(i);
+             System.out.println(
+                     "==========================================="
+                     + "\n\nOPERATION:"+selectedOp.name()+
+                     "\nINPUT : "+Arrays.toString(i)+
+                     "\nRESULT: "+p.getResult()+
+                     "\nCORRECT RESULT : "+ result +
+                     "\nSTATUS :"+ (result == p.getResult() ? "[CORRECT]" : "[WRONG]")) ;
+        }
+//        double[] vet = {0, 0,0,0,0,0,0,0,0};
+//        PerceptronSolver p = new PerceptronSolver();
+//        p.train(vet, 0.0, 0.3f, 500,OR);
 
     }
 

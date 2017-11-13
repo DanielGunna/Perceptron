@@ -65,7 +65,7 @@ public class PerceptronSolver {
         double[] output = new double[trainData.length];
         for (int i = 0; i < trainData.length; i++) {
             output[i] = getOutput(trainData[i]);
-            System.out.println(Arrays.toString(trainData[i])+" "+output[i]);
+            //System.out.println(Arrays.toString(trainData[i])+" "+output[i]);
         }
         return output;
     }
@@ -136,14 +136,14 @@ public class PerceptronSolver {
             sum += weights[i] * input[i];
         }
         sum+=weightBias;
-        System.out.println(sum);
+       // System.out.println(sum);
         return (sum > threshold) ? 1 : 0;
     }
 
     private void solve() {
-        System.out.println(Arrays.toString(weights));
+        //System.out.println(Arrays.toString(weights));
         result = multiplyWeights(inputs);
-        System.out.println(Arrays.toString(inputs) + " " + result);
+        //System.out.println(Arrays.toString(inputs) + " " + result);
     }
 
 }
