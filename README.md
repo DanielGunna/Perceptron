@@ -5,17 +5,17 @@ A simple user interface, that loads a file, was implemented to help the user han
 
 # Using  implementaion of Perceptron Algorithm Logic
 ```java
-\\An array with multiple inputs to be solved
+//An array with multiple inputs to be solved
  
  double[] input  = {0, 0,0,0,0,0,0,0,0};
  
  PerceptronSolver p = new PerceptronSolver();
  
- \\ The method that train the Perceptron Algorithm and evaluate the results 
- \\The params are : input, threshold, learn rate, number of iterations and operation 
+ // The method that train the Perceptron Algorithm and evaluate the results 
+ //The params are : input, threshold, learn rate, number of iterations and operation 
  p.train(vet, 0.0, 0.3f, 500,OperationType.OR);
  
- \\Get the result 
+ //Get the result 
  p.getResult();
 ```
 ## The possible operations are:
