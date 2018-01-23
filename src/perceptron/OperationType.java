@@ -5,10 +5,7 @@
  */
 package perceptron;
 
-/**
- *
- * @author felipesilva
- */
+ 
 public enum OperationType {
     AND,OR,XOR;
 }
