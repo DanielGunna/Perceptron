@@ -5,10 +5,7 @@
  */
 package perceptron;
 
-/**
- *
- * @author felipesilva
- */
+ 
 public class OperationsUtils {
 
     public static int and(double[] input) {
